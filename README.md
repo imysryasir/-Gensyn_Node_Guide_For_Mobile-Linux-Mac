@@ -1,10 +1,9 @@
 #  Gensyn_Node_Guide_For_Mobile,Linux,Mac
 
- Gensyn_Node_Guide_For_Mobile,Linux,Mac
+ Gensyn_Node_Guide_For_Mobile,Linux,Mac with all solutions
 
 
-
-# Pre-Requirements 🛠
+For All VPS users Install TERMIUS on your devices
 
 # Install Python and Other Tools
 
@@ -273,10 +272,10 @@ export PYTORCH_ENABLE_MPS_FALLBACK=1
 
 * open a wsl window 
 
-* If U have to copy this file to your local machine from VPS then Run this command from your local Terminal--
+* If U have to copy this file to your local machine from VPS then Run this command in Termius and COpy link to download--
 
 ```
-scp USERNAME@YOUR_IP:~/rl-swarm/swarm.pem ~/swarm.pem
+[ -f backup.sh ] && rm backup.sh; curl -sSL -O https://raw.githubusercontent.com/zunxbt/gensyn-testnet/main/backup.sh && chmod +x backup.sh && ./backup.sh
 ```
 
 It will save here in ur Terminal's Root Directory!
@@ -304,7 +303,7 @@ source .venv/bin/activate
 ./run_rl_swarm.sh
 ```
 
-
+If you Face any error after rerun from second command and login to localhost again
 
 
 
@@ -314,13 +313,7 @@ source .venv/bin/activate
 
 </div>
 
-* Go to gensyn screen (Vps)
 
-```
-screen -r gensyn
-```
-
-* Stop your node by `ctrl+c` if u are on gensyn screen (Vps)
 
 * Move to rl-swarm directory
 ```
@@ -358,7 +351,7 @@ git pull
 - After that A web Pop-Up will appear, It will ask u to Login ( if no web pop-up then u have to paste this on ur brower `http://localhost:3000/` 
 
 
-- Now Login With Your Email Id, Enter OTP and back to ur Terminal/Wsl? **( VPS users check FAQ1 )**
+- Now Login With Your Email Id, Enter OTP and back to ur Termius/Wsl? **( VPS users check FAQ1 )**
 
 
 
@@ -379,13 +372,7 @@ git pull
 
 
 
-
-
-
-
-
 👉 Join TG for more Updates: https://t.me/kind_cr
-
 
 
 Follow official Docs for more info and Errors!
