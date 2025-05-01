@@ -360,7 +360,6 @@ git pull
 
 * Now It will promt `Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]` Enter `N`
 
-* If it prompts a or b, Select a and then 0.5 or 1.5 DONE.
 
 
 
