@@ -1,6 +1,5 @@
 #  Gensyn_Node_Guide_For_Mobile,Linux,Mac
 
- Gensyn_Node_Guide_For_Mobile,Linux,Mac with all solutions
 
 
 For All VPS users Install TERMIUS on your devices
