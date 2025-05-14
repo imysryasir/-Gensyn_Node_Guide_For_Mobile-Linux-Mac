@@ -189,7 +189,7 @@ screen -r gensyn
 </div>
 
 
-# 1️⃣ How to Login or access  http://localhost:3000/ in VPS? 📶
+#  How to Login or access  http://localhost:3000/ in VPS? 📶
 
 * Open a new Terminal and login ur vps 
 
@@ -242,32 +242,7 @@ cloudflared tunnel --url http://localhost:3000
 
 
 
-# 2️⃣ Solution of OOM errors on MacBook (Memory/Cpu limit)
-
-* Open -
- ```
-nano ~/.zshrc
-```
-
-* Paste in the file
-
-```
-export PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0
-export PYTORCH_ENABLE_MPS_FALLBACK=1
-```
-* Reload with
-
-```
-  source ~/.zshrc
-```
-
-# 3️⃣ How to get the Node Name?
-
-* Check the image below to get your Node id!
-
-![image](https://github.com/user-attachments/assets/728c6401-75c8-43b4-973c-e9d515c4b453)
-
-# 4️⃣ Save your `swarm.pem` file (for future login)
+#  Save your `swarm.pem` file (for future login)
 
 * open a wsl window 
 
@@ -280,7 +255,7 @@ export PYTORCH_ENABLE_MPS_FALLBACK=1
 It will save here in ur Terminal's Root Directory!
 
 
-# 5️⃣ How To start the Next Day (Local Pc)
+#  How To start the Next Day (Local Pc)
 
 *
  ```
@@ -360,7 +335,30 @@ git pull
 * Now It will promt `Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]` Enter `N`
 
 
+## ⚠️ Troubleshooting
 
+### 🔴 Daemon failed to start in 15.0 seconds
+- If you are facing this issue then follow this step by step guide
+- First use tihs command
+```
+nano $(python3 -c "import hivemind.p2p.p2p_daemon as m; print(m.__file__)")
+```
+- Then scroll down and look for this line `startup_timeout: float = 15,` , here u need to modify this 15 with 120, and after modifying it will look like this : `startup_timeout: float = 120,`
+- Save this changes, first use `Ctrl` + `X` and then press `Y` and then press `Enter`
+- Now use this command again to run `rl-swarm`
+```bash
+./run_rl_swarm.sh
+```
+
+
+
+### 2. Check Wins
+- Visit : https://gensyn-node.vercel.app/
+- Enter Peer-ID that you often see this in your logs
+- The more win, the better
+
+> [!Note]
+> If you see `0x0000000000000000000000000000000000000000` in `Connected EOA Address` section, that means your contribution is not being recorded, so you should run the node from beginning with fresh new email (means u need to delete existing `swarm.pem` file
 
 
 
