@@ -375,6 +375,11 @@ cd rl-swarm
 3. Open the file for editing:
 
 ```
+sudo apt update
+sudo apt install nano
+```
+
+```
 nano modal-login/app/page.tsx
 ```
 
