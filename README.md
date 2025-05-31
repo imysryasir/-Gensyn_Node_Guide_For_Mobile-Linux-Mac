@@ -297,7 +297,9 @@ cd rl-swarm
 * Pull the latest release
 
 ```
-git pull
+git reset --hard
+git pull origin main
+git checkout tags/v0.4.3
 ```
 
 * Start the swarm Node 🚀
